@@ -4,25 +4,30 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    MoneyManager money = new MoneyManager();
-    // Start is called before the first frame update
-    void Start()
+    private static GameManager _instance;
+
+    public static GameManager Instance
     {
-        
+        get { return _instance;  }
     }
+
+    private void Awake()
+    {
+        if (_instance != null && _instance != this)
+        {
+            Destroy(this.gameObject);
+            return;
+        }
+    }
+
+    MoneyManager money = new MoneyManager();
 
     // Update is called once per frame
     void Update()
     {
         if (Input.GetButtonDown("Fire1")){
-            float m = 0;
-            float n = 0;
-            for (int i = 0; i < 100000; i++)
-            {
-                m += money.GetNewMultiplier();
-                n += 1;
-        }
-            Debug.Log(m / n);
+
+
         }
     }
 }
