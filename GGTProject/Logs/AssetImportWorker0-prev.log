@@ -15,11 +15,11 @@ D:/Game Design/Unity/UnityGames/GGTest/GGTProject
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-65205
+49791
 Successfully changed project path to: D:/Game Design/Unity/UnityGames/GGTest/GGTProject
 D:/Game Design/Unity/UnityGames/GGTest/GGTProject
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 29.23 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 45.49 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.2.7f1 (c53830e277f1)
 [Subsystems] Discovering subsystems at path D:/Game Design/Unity/UnityEditors/2020.2.7f1/Editor/Data/Resources/UnitySubsystems
@@ -35,108 +35,188 @@ Initialize mono
 Mono path[0] = 'D:/Game Design/Unity/UnityEditors/2020.2.7f1/Editor/Data/Managed'
 Mono path[1] = 'D:/Game Design/Unity/UnityEditors/2020.2.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'D:/Game Design/Unity/UnityEditors/2020.2.7f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56712
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56968
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: D:/Game Design/Unity/UnityEditors/2020.2.7f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: D:/Game Design/Unity/UnityEditors/2020.2.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001608 seconds.
+Registered in 0.002060 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 52.79 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 39.75 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.490 seconds
+- Completed reload, in  1.447 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.000741 seconds.
+Registered in 0.001447 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.30 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.36 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.558 seconds
+- Completed reload, in  1.223 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
-Refreshing native plugins compatible for Editor in 0.48 ms, found 0 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Refreshing native plugins compatible for Editor in 0.39 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1115 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 56.9 MB.
-System memory in use after: 56.9 MB.
+Unloading 1273 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 63.2 MB.
+System memory in use after: 63.3 MB.
 
-Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 1557.
-Total: 4.025500 ms (FindLiveObjects: 0.287600 ms CreateObjectMapping: 0.114800 ms MarkObjects: 3.459200 ms  DeleteObjects: 0.160900 ms)
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 1709.
+Total: 2.190100 ms (FindLiveObjects: 0.225800 ms CreateObjectMapping: 0.062300 ms MarkObjects: 1.802900 ms  DeleteObjects: 0.097600 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Scenes/Scripts/MoneyManager.cs
-  artifactKey: Guid(ad55aecd88119674e9ab4097a4146374) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Scripts/MoneyManager.cs using Guid(ad55aecd88119674e9ab4097a4146374) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a47c9ede6b37d76c560e28d721ead272') in 0.100872 seconds
-  Import took 0.104412 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000678 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.061 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1110 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 56.8 MB.
-System memory in use after: 56.9 MB.
-
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1560.
-Total: 1.889000 ms (FindLiveObjects: 0.234300 ms CreateObjectMapping: 0.055000 ms MarkObjects: 1.507900 ms  DeleteObjects: 0.090900 ms)
+  path: Assets/Animated PBR Chest Demo/Animation
+  artifactKey: Guid(d3f3f2f7d0405184f9c7521c6471ad2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animated PBR Chest Demo/Animation using Guid(d3f3f2f7d0405184f9c7521c6471ad2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5113c3e59088a174267f74d1c2d7e1f') in 0.008371 seconds
+  Import took 0.010691 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 412.476331 seconds.
-  path: Assets/Scenes/Scripts/MoneyManager.cs
-  artifactKey: Guid(ad55aecd88119674e9ab4097a4146374) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Scripts/MoneyManager.cs using Guid(ad55aecd88119674e9ab4097a4146374) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b9c54eaa41a0e9bed8e22d9732e1dcc') in 0.003827 seconds
-  Import took 0.007926 seconds .
+  Time since last request: 1.933798 seconds.
+  path: Assets/Animated PBR Chest Demo/Animation/Animated PBR Chest _Demo.controller
+  artifactKey: Guid(1a6aac9e874e17646831952da99205e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animated PBR Chest Demo/Animation/Animated PBR Chest _Demo.controller using Guid(1a6aac9e874e17646831952da99205e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9679b3a456ef9d249f53ec741a2977c') in 0.061226 seconds
+  Import took 0.063764 seconds .
 
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.004175 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.32 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  3.404 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.28 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1110 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 56.9 MB.
-System memory in use after: 56.9 MB.
+Received Import Request.
+  Time since last request: 0.867200 seconds.
+  path: Assets/Animated PBR Chest Demo/Animation/Animated PBR Chest _Idle.anim
+  artifactKey: Guid(4b79401f9dd792243ac1fc7942d1d6e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animated PBR Chest Demo/Animation/Animated PBR Chest _Idle.anim using Guid(4b79401f9dd792243ac1fc7942d1d6e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab29608beeed511bc2da684d8577bb4a') in 0.015403 seconds
+  Import took 0.018415 seconds .
 
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1563.
-Total: 4.338800 ms (FindLiveObjects: 0.466200 ms CreateObjectMapping: 0.198600 ms MarkObjects: 3.564500 ms  DeleteObjects: 0.107200 ms)
+========================================================================
+Received Import Request.
+  Time since last request: 3.001981 seconds.
+  path: Assets/Animated PBR Chest Demo/Fbx/Animated PBR Chest _Wood_Demo.fbx
+  artifactKey: Guid(1cc6cc20abc7a464a9dec49ee02361cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animated PBR Chest Demo/Fbx/Animated PBR Chest _Wood_Demo.fbx using Guid(1cc6cc20abc7a464a9dec49ee02361cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '87de68d893e017064e7c34f975e95c6c') in 1.028250 seconds
+  Import took 1.031511 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000375 seconds.
+  path: Assets/Animated PBR Chest Demo/Fx/Animated PBR Chest _Fx.prefab
+  artifactKey: Guid(f9c41c06e66ac264f8e6d8d032a0b1bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animated PBR Chest Demo/Fx/Animated PBR Chest _Fx.prefab using Guid(f9c41c06e66ac264f8e6d8d032a0b1bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a877078f5df3f682a2c16744a213e741') in 0.015288 seconds
+  Import took 0.017866 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.476689 seconds.
+  path: Assets/Animated PBR Chest Demo/Scenes/Plane.mat
+  artifactKey: Guid(02b3ce7dc87503d469cf87f39686264f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animated PBR Chest Demo/Scenes/Plane.mat using Guid(02b3ce7dc87503d469cf87f39686264f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9420456215b01e99ff5bc9cbd7acb879') in 0.216226 seconds
+  Import took 0.218808 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.358648 seconds.
+  path: Assets/Animated PBR Chest Demo/Prefabs/Animated PBR Chest _Wood_Demo.prefab
+  artifactKey: Guid(1083f87f08232f541942f4a22a00127e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animated PBR Chest Demo/Prefabs/Animated PBR Chest _Wood_Demo.prefab using Guid(1083f87f08232f541942f4a22a00127e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0059e6edf04460dcb45fc4753ea88128') in 0.071442 seconds
+  Import took 0.074853 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 17.321323 seconds.
+  path: Assets/Animated PBR Chest Demo/Materials/Light.mat
+  artifactKey: Guid(0a797598a1a8bf7429207d4fbef893b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animated PBR Chest Demo/Materials/Light.mat using Guid(0a797598a1a8bf7429207d4fbef893b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7bc570e75f36b8c669b017e603118448') in 0.018150 seconds
+  Import took 0.021124 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 183.100685 seconds.
+  path: Assets/Animated PBR Chest Demo/Textures/Light.png
+  artifactKey: Guid(b792e968427393649a901a6d5b4a1028) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animated PBR Chest Demo/Textures/Light.png using Guid(b792e968427393649a901a6d5b4a1028) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e3cf31c15982e0d48f0f783ee68aa34') in 0.034018 seconds
+  Import took 0.037063 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000367 seconds.
+  path: Assets/Animated PBR Chest Demo/Textures/WoodChest_Wood_Chest_Normal.png
+  artifactKey: Guid(853bdaa376e0e8243864e081392a9516) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animated PBR Chest Demo/Textures/WoodChest_Wood_Chest_Normal.png using Guid(853bdaa376e0e8243864e081392a9516) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '67ee17429fd2d371fabf3d1af9ce6d05') in 0.199547 seconds
+  Import took 0.202351 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000398 seconds.
+  path: Assets/Animated PBR Chest Demo/Textures/orblight.png
+  artifactKey: Guid(ede2723a399ab1249b0516b6c4c3ffe6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animated PBR Chest Demo/Textures/orblight.png using Guid(ede2723a399ab1249b0516b6c4c3ffe6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c86097d890fa554cc1231cd569e0ed21') in 0.013023 seconds
+  Import took 0.015780 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000406 seconds.
+  path: Assets/Animated PBR Chest Demo/Textures/WoodChest_Wood_Chest_AlbedoTransparency.png
+  artifactKey: Guid(69180b534ec91564b9832744f6b8eaf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animated PBR Chest Demo/Textures/WoodChest_Wood_Chest_AlbedoTransparency.png using Guid(69180b534ec91564b9832744f6b8eaf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc8be23411cfad51f336c4df07f6c89f') in 0.088821 seconds
+  Import took 0.091355 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000338 seconds.
+  path: Assets/Animated PBR Chest Demo/Textures/WoodChest_Wood_Chest_Emission.png
+  artifactKey: Guid(550696d816334c840a027fb295ad0a13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animated PBR Chest Demo/Textures/WoodChest_Wood_Chest_Emission.png using Guid(550696d816334c840a027fb295ad0a13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b2c8b43c731cf9d80c9be51ec8eb238f') in 0.012031 seconds
+  Import took 0.014459 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000374 seconds.
+  path: Assets/Animated PBR Chest Demo/Textures/WoodChest_Wood_Chest_MetallicSmoothness.png
+  artifactKey: Guid(29bd167da41797b45a24b21110337716) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animated PBR Chest Demo/Textures/WoodChest_Wood_Chest_MetallicSmoothness.png using Guid(29bd167da41797b45a24b21110337716) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0fd086557de8680938e173295b922d18') in 0.040046 seconds
+  Import took 0.042724 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.260428 seconds.
+  path: Assets/Animated PBR Chest Demo/Timeline/fx_timeTimeline.playable
+  artifactKey: Guid(5d1c4b2b31e588d448b6d3498be49911) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animated PBR Chest Demo/Timeline/fx_timeTimeline.playable using Guid(5d1c4b2b31e588d448b6d3498be49911) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19be4f2b9f3efedb9ff299fde5ff9f48') in 0.071750 seconds
+  Import took 0.074980 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.356410 seconds.
+  path: Assets/Animated PBR Chest Demo/Materials/LightOrb.mat
+  artifactKey: Guid(b72d05466331ce2458417edeab75c2c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animated PBR Chest Demo/Materials/LightOrb.mat using Guid(b72d05466331ce2458417edeab75c2c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '044cb4271091c87b19420d3de0d6bc72') in 0.051505 seconds
+  Import took 0.055069 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000442 seconds.
+  path: Assets/Animated PBR Chest Demo/Materials/WoodChest.mat
+  artifactKey: Guid(87e48fbbeabcb374eb8ea102b2d7b25f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animated PBR Chest Demo/Materials/WoodChest.mat using Guid(87e48fbbeabcb374eb8ea102b2d7b25f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '548e41a72226a8ac6e5b6f3d51c65879') in 0.034347 seconds
+  Import took 0.038359 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 22.957808 seconds.
+  path: Assets/TextMesh Pro
+  artifactKey: Guid(f54d1bd14bd3ca042bd867b519fee8cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro using Guid(f54d1bd14bd3ca042bd867b519fee8cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1cb39b40c93efedb23353903319186c0') in 0.008613 seconds
+  Import took 0.010705 seconds .
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
