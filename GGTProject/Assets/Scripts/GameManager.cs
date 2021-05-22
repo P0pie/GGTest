@@ -50,14 +50,12 @@ namespace PickBonus
 
         //Events
         public event Action OnPlay;
-        public event Action OnPick;
         public event Action OnPooper;
 
         private void Start()
         {
             OnPlay += RoundSetup;
             OnPooper += RoundEnd;
-            OnPick += OpenChest;
         }
 
         //Triggered by Play Button
