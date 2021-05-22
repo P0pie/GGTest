@@ -9,8 +9,11 @@ namespace PickBonus
         //Preferably everything done in this class should be done server-side.
         //Also, preferably everything done here is taken care of by a Cyber Security specialist
         //Since the numerical values in use here are small, I'm just going to use floats.
-        float _balance = 0, _bet = 1, _winnings;
-
+        float _balance = 10.00f, _winnings = 0.00f;
+        float[] GeneratedWinnings;
+        int _bet = 1;
+        
+        //Inputs _bet to an enum to output actual desired bet float.
         public float GetBet()
         {
             switch (_bet)
@@ -26,12 +29,40 @@ namespace PickBonus
             }
         }
 
+        //returns _balance
+        public float GetBalance()
+        {
+            return _balance;
+        }
+
+        //returns _winnings
+        public float GetWinnings()
+        {
+            return _winnings;
+        }
+
+        //Increases _balance by input float
         public void AddFunds(float funds)
         {
             _balance += funds;
         }
 
-        //Give true to increase bet, false to reduce bet.
+        //Returns true if successfully places Bet. Also sets new winnings.
+        public bool PlaceBet()
+        {
+            if (GetBalance() >= GetBet())
+            {
+                _balance -= GetBet();
+                _winnings = GetBet() * GetNewMultiplier();
+                winningsIndex = 0;
+                separatedWinnings = SeparateWinnings(_winnings);
+                return true;
+            }
+            else
+                return false;
+        }
+
+        //Takes argument true to increase bet, false to reduce bet.
         public void ChangeBet(bool isAdd)
         {
             if (isAdd && (_bet < 3))
@@ -48,8 +79,10 @@ namespace PickBonus
             }
         }
 
+
+
         //Calculates win multiplier
-        public int GetNewMultiplier()
+        private int GetNewMultiplier()
         {
             float f = GetSecureNumberRange(0, 100);
 
@@ -116,6 +149,44 @@ namespace PickBonus
                 return Random.Range((int)1, (int)6) * 100;
                 //inclusive x, exclusive y
             }
+        }
+
+        //Get Winnings Distribution
+        private float[] SeparateWinnings(float totalWinnings)
+        {
+            float[] f = new float[8];
+            int w = (int)totalWinnings * 4;
+            float z = 0;
+
+            for (int i = 0; i<8; i++)
+            {
+                if (w > 0 && i!=7)
+                {
+                    int y = Random.Range(1, w + 1);
+                    f[i] = (float)y / 4;
+                    w -= y;
+                }
+                else if (w > 0)
+                {
+                    f[i] = (float)w / 4;
+                    w = 0;
+                }
+                else
+                {
+                    f[i] = 0;
+                }
+                z += f[i];
+            }
+            return f;
+        }
+
+        int winningsIndex = 0;
+        float[] separatedWinnings;
+
+        public float NextWin()
+        {
+            winningsIndex++;
+            return separatedWinnings[winningsIndex - 1];
         }
     }
 }
