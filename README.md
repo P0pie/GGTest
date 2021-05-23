@@ -4,6 +4,8 @@
  
 # Setup
  
+**Implemented using Unity 2020.2.7f1**
+
 GameManager: Implements Singleton & Observer Patterns to control all actions in-game. Contains a MoneyManager class.
 - IncreaseBet(), DecreaseBet(): calls MoneyManager.ChangeBet() & updates bet display.
 - Event OnPlay(): calls RoundSetup(): Hides appropriate UI, calculates and 'distributes' winnings using MoneyManager, and begins game.
