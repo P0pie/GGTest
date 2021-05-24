@@ -89,7 +89,7 @@ namespace PickBonus
             //Move Bet value to clear up screenspace. Spawn chests.
         }
 
-        public GameObject CoinPrefab;
+        public GameObject CoinPrefab, PooperPrefab;
         public Transform PickedChest, coinTarget;
 
         public void OpenChest()
@@ -100,20 +100,40 @@ namespace PickBonus
             if (f != 0)
             {
                 displayedWinnings += f;
-                UIUpdate(WinningsText, "Winnings: ", displayedWinnings);
+                StartCoroutine(Open(true));
 
-                for (int i = 0; i < 10; i++)
-                {
-                    GameObject g = Instantiate(CoinPrefab, new Vector3((PickedChest.position.x + UnityEngine.Random.Range(-1f,1f)), (PickedChest.position.y + UnityEngine.Random.Range(-1f, 1f)), PickedChest.position.z), PickedChest.rotation);
-                    Vector3[] v = new Vector3[1];
-                    v[0] = coinTarget.position;
-                    g.transform.DOPath(v, 3, (PathType)1, (PathMode)1);
-                }
             }
             else
-                OnPooper(); //basically just calls RoundEnd
+                StartCoroutine(Open(false)); //basically just calls RoundEnd
         }
 
+        IEnumerator Open(bool isWin)
+        {
+            yield return new WaitForSeconds(1);
+            GameObject g;
+            if (isWin)
+            {
+                for (int i = 0; i < 10; i++)
+                {
+                 g = Instantiate(CoinPrefab, new Vector3((PickedChest.position.x + UnityEngine.Random.Range(-1f, 1f)), (PickedChest.position.y + UnityEngine.Random.Range(-1f, 1f)), PickedChest.position.z), PickedChest.rotation);
+                Vector3[] v = new Vector3[2];
+                v[0] = new Vector3(0, 5, -10);
+                v[1] = coinTarget.position;
+                g.transform.DOPath(v, 3, (PathType)1, (PathMode)1);
+                }
+                UIUpdate(WinningsText, "Winnings: ", displayedWinnings);
+            }
+            else
+            {
+                g = Instantiate(PooperPrefab, PickedChest.position, PickedChest.rotation);
+                Vector3[] v = new Vector3[1];
+                v[0] = cam.transform.position;
+                g.transform.LookAt(cam.transform.position * -1);
+                g.transform.DOPath(v, 3, (PathType)1, (PathMode)1);
+                OnPooper();
+            }
+
+        }
         public void FinishChestOpen()
         {
             OnPickEnd();
@@ -121,7 +141,13 @@ namespace PickBonus
 
         void RoundEnd()
         {
-            Debug.Log("Round End");
+            StartCoroutine(GG());
+            
+        }
+
+        IEnumerator GG()
+        {
+            yield return new WaitForSeconds(2);
             money.AddFunds(money.GetWinnings());
             UIUpdate(BalanceText, "Balance: ", money.GetBalance());
             WinningsText.text = "Previous " + WinningsText.text;

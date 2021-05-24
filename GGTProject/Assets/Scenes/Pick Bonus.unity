@@ -2111,6 +2111,7 @@ MonoBehaviour:
   UI2Hide: {fileID: 1171712512}
   Chests: {fileID: 521123165}
   CoinPrefab: {fileID: 7126281174198766983, guid: 0f5a1d0fec815994587cca7e997b667a, type: 3}
+  PooperPrefab: {fileID: 8745190395687973082, guid: caa82d74149f99a41bd0c102822ff7d4, type: 3}
   PickedChest: {fileID: 0}
   coinTarget: {fileID: 272821026}
   cam: {fileID: 944650013}
