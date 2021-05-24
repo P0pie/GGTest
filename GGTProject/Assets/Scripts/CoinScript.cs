@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class CoinScript : MonoBehaviour
 {
+    [SerializeField] AudioSource sound;
+    private void Awake()
+    {
+        sound.PlayDelayed(Random.Range(0f, .5f));
+    }
+
     // Update is called once per frame
     void Update()
     {

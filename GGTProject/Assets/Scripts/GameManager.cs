@@ -102,7 +102,7 @@ namespace PickBonus
                 displayedWinnings += f;
                 UIUpdate(WinningsText, "Winnings: ", displayedWinnings);
 
-                for (int i = 0; i < 20; i++)
+                for (int i = 0; i < 10; i++)
                 {
                     GameObject g = Instantiate(CoinPrefab, new Vector3((PickedChest.position.x + UnityEngine.Random.Range(-1f,1f)), (PickedChest.position.y + UnityEngine.Random.Range(-1f, 1f)), PickedChest.position.z), PickedChest.rotation);
                     Vector3[] v = new Vector3[1];
