@@ -1,0 +1,237 @@
+Using pre-set license
+Built from '2020.2/staging' branch; Version is '2020.2.7f1 (c53830e277f1) revision 12924976'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Home; OS build 19041.985; Version 2004; 64bit' Language: 'en' Physical Memory: 16337 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+D:\Game Design\Unity\UnityEditors\2020.2.7f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+D:/Game Design/Unity/UnityGames/GGTest/GGTProject
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+57101
+Successfully changed project path to: D:/Game Design/Unity/UnityGames/GGTest/GGTProject
+D:/Game Design/Unity/UnityGames/GGTest/GGTProject
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 43.14 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.2.7f1 (c53830e277f1)
+[Subsystems] Discovering subsystems at path D:/Game Design/Unity/UnityEditors/2020.2.7f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/Game Design/Unity/UnityGames/GGTest/GGTProject/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1060 (ID=0x1c20)
+    Vendor:   
+    VRAM:     2987 MB
+    Driver:   27.21.14.6109
+Initialize mono
+Mono path[0] = 'D:/Game Design/Unity/UnityEditors/2020.2.7f1/Editor/Data/Managed'
+Mono path[1] = 'D:/Game Design/Unity/UnityEditors/2020.2.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'D:/Game Design/Unity/UnityEditors/2020.2.7f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56388
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: D:/Game Design/Unity/UnityEditors/2020.2.7f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: D:/Game Design/Unity/UnityEditors/2020.2.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002091 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 42.90 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.483 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.002492 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.40 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.246 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Refreshing native plugins compatible for Editor in 0.64 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1285 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 64.0 MB.
+System memory in use after: 64.0 MB.
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 1726.
+Total: 2.297800 ms (FindLiveObjects: 0.201000 ms CreateObjectMapping: 0.071100 ms MarkObjects: 1.905400 ms  DeleteObjects: 0.118700 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/stone_floor_texture/Stone_floor_09.png
+  artifactKey: Guid(6cac73f2a8fa6ce42b25c745285032ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/stone_floor_texture/Stone_floor_09.png using Guid(6cac73f2a8fa6ce42b25c745285032ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e6d5484a711435a73b6e42bd9acc94e') in 0.197712 seconds
+  Import took 0.200388 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000358 seconds.
+  path: Assets/stone_floor_texture/Stone_floor_09.mat
+  artifactKey: Guid(6f3b764d69dc4d04d8e2ce516d2dfaa3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/stone_floor_texture/Stone_floor_09.mat using Guid(6f3b764d69dc4d04d8e2ce516d2dfaa3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18cb64f835a60903b4cd4e7a8a412dd4') in 0.510018 seconds
+  Import took 0.543094 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 16.320040 seconds.
+  path: Assets/NotDoneByMe
+  artifactKey: Guid(763e23c83a886394ea879723dcb251cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NotDoneByMe using Guid(763e23c83a886394ea879723dcb251cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58be9e156ac48cb12519620faf2e6705') in 0.008014 seconds
+  Import took 0.013649 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.419735 seconds.
+  path: Assets/NotMadeByMe
+  artifactKey: Guid(763e23c83a886394ea879723dcb251cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NotMadeByMe using Guid(763e23c83a886394ea879723dcb251cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e9f5a25d32d692578978f3e8ef6f852') in 0.008548 seconds
+  Import took 0.010813 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.033491 seconds.
+  path: Assets/NotMadeByMe/stone_floor_texture
+  artifactKey: Guid(aea8dea4289658543bb799aab43f74bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NotMadeByMe/stone_floor_texture using Guid(aea8dea4289658543bb799aab43f74bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce40e826e56912ea77b434a6cf58242d') in 0.008389 seconds
+  Import took 0.011402 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 40.291635 seconds.
+  path: Assets/NotMadeByMe/stone_floor_texture/Stone_floor_09.png
+  artifactKey: Guid(6cac73f2a8fa6ce42b25c745285032ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NotMadeByMe/stone_floor_texture/Stone_floor_09.png using Guid(6cac73f2a8fa6ce42b25c745285032ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '62b48c1ac919bfc869553ffbcd88785a') in 0.012537 seconds
+  Import took 0.017290 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 15.870230 seconds.
+  path: Assets/FBX/Materials/CoinMaterial.mat
+  artifactKey: Guid(26d0968dda78da342a227f78ea82ffdc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FBX/Materials/CoinMaterial.mat using Guid(26d0968dda78da342a227f78ea82ffdc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8eb0e81555166c78c8cb1db9afc64853') in 0.025463 seconds
+  Import took 0.028118 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000326 seconds.
+  path: Assets/NotMadeByMe/stone_floor_texture/Materials/Stone_floor_09.mat
+  artifactKey: Guid(3109dfdedc1670943b56be199ca4e621) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NotMadeByMe/stone_floor_texture/Materials/Stone_floor_09.mat using Guid(3109dfdedc1670943b56be199ca4e621) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd07a5d498eac8aeb12c00ea339dd16a') in 0.020077 seconds
+  Import took 0.025200 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000391 seconds.
+  path: Assets/UI_Elements/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset
+  artifactKey: Guid(2e498d1c8094910479dc3e1b768306a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI_Elements/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset using Guid(2e498d1c8094910479dc3e1b768306a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd41be788d7093d3accf0efea5a3cb416') in 0.063793 seconds
+  Import took 0.068489 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000300 seconds.
+  path: Assets/FBX/Materials/CoinMaterial.mat
+  artifactKey: Guid(26d0968dda78da342a227f78ea82ffdc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FBX/Materials/CoinMaterial.mat using Guid(26d0968dda78da342a227f78ea82ffdc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8eb0e81555166c78c8cb1db9afc64853') in 0.012316 seconds
+  Import took 0.014835 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 17.685210 seconds.
+  path: Assets/Plugins/Demigiant/DOTween/Editor/Imgs/DOTweenIcon.png
+  artifactKey: Guid(8da095e39e9b4df488dfd436f81116d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/Demigiant/DOTween/Editor/Imgs/DOTweenIcon.png using Guid(8da095e39e9b4df488dfd436f81116d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc8fca0eb4ed687ebc251a70299da8d7') in 0.022805 seconds
+  Import took 0.026070 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000239 seconds.
+  path: Assets/Plugins/Demigiant/DOTween/Editor/Imgs/Header.jpg
+  artifactKey: Guid(78a59ca99f8987941adb61f9e14a06a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/Demigiant/DOTween/Editor/Imgs/Header.jpg using Guid(78a59ca99f8987941adb61f9e14a06a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8fad9aabf533f848e1327f6e8cef9e5') in 0.044570 seconds
+  Import took 0.047875 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000259 seconds.
+  path: Assets/Plugins/Demigiant/DOTween/Editor/Imgs/Footer.png
+  artifactKey: Guid(7051dba417b3d53409f2918f1ea4938d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/Demigiant/DOTween/Editor/Imgs/Footer.png using Guid(7051dba417b3d53409f2918f1ea4938d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '38c3180deeac7aa895d085878c57b282') in 0.019030 seconds
+  Import took 0.022107 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000362 seconds.
+  path: Assets/Plugins/Demigiant/DOTween/Editor/Imgs/Footer_dark.png
+  artifactKey: Guid(519694efe2bb2914788b151fbd8c01f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/Demigiant/DOTween/Editor/Imgs/Footer_dark.png using Guid(519694efe2bb2914788b151fbd8c01f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa8f1c557f7d655d0a7ebc064c20aa84') in 0.020163 seconds
+  Import took 0.022802 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000361 seconds.
+  path: Assets/Plugins/Demigiant/DOTween/Editor/Imgs/DOTweenIcon.png
+  artifactKey: Guid(8da095e39e9b4df488dfd436f81116d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/Demigiant/DOTween/Editor/Imgs/DOTweenIcon.png using Guid(8da095e39e9b4df488dfd436f81116d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc8fca0eb4ed687ebc251a70299da8d7') in 0.006239 seconds
+  Import took 0.009134 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.065231 seconds.
+  path: Assets/Plugins/Demigiant/DOTween/Editor/Imgs/Footer.png
+  artifactKey: Guid(7051dba417b3d53409f2918f1ea4938d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/Demigiant/DOTween/Editor/Imgs/Footer.png using Guid(7051dba417b3d53409f2918f1ea4938d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '38c3180deeac7aa895d085878c57b282') in 0.005457 seconds
+  Import took 0.008069 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002382 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.50 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.194 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.49 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1261 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 66.1 MB.
+System memory in use after: 66.2 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 1776.
+Total: 2.624900 ms (FindLiveObjects: 0.214400 ms CreateObjectMapping: 0.069900 ms MarkObjects: 2.253700 ms  DeleteObjects: 0.085400 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 99.314401 seconds.
+  path: Assets/NotMadeByMe/stone_floor_texture/Stone_floor_09.mat
+  artifactKey: Guid(6f3b764d69dc4d04d8e2ce516d2dfaa3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NotMadeByMe/stone_floor_texture/Stone_floor_09.mat using Guid(6f3b764d69dc4d04d8e2ce516d2dfaa3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e084530bf58f2b72532c28461e35774') in 0.091097 seconds
+  Import took 0.094685 seconds .
+
