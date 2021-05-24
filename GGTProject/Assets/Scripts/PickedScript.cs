@@ -6,7 +6,7 @@ namespace PickBonus
 {
     public class PickedScript : MonoBehaviour
     {
-        public Transform Lid, Hinge;
+        private Transform Lid, Hinge;
         public BoxCollider myCollider;
         bool rotate = false, open = false, closing = false;
 
@@ -15,6 +15,8 @@ namespace PickBonus
         {
             GameManager.Instance.OnPick += DisableCollider;
             GameManager.Instance.OnPickEnd += EnableCollider;
+            Lid = transform.GetChild(0);
+            Hinge = transform.GetChild(1);
         }
 
         private void OnEnable()
@@ -45,16 +47,16 @@ namespace PickBonus
 
         private IEnumerator LeanForward()
         {
-            transform.Rotate(0, 0, (40 * Time.deltaTime));
-            yield return new WaitForSeconds(1);
+            transform.Rotate(0, 0, (80 * Time.deltaTime));
+            yield return new WaitForSeconds(.5f);
             rotate = false;
             open = true;
         }
 
         private IEnumerator OpenLid()
         {
-            Lid.RotateAround(Hinge.position, Vector3.left, -40 * Time.deltaTime);
-            yield return new WaitForSeconds(2);
+            Lid.RotateAround(Hinge.position, Vector3.left, -80 * Time.deltaTime);
+            yield return new WaitForSeconds(1);
             open = false;
             closing = true;
         }
@@ -63,7 +65,7 @@ namespace PickBonus
         {
             yield return new WaitForSeconds(1);
             transform.localEulerAngles = new Vector3(0, -90, 0);
-            Lid.position = new Vector3(0, 1, 0);
+            Lid.localPosition = new Vector3(0, 1, 0);
             Lid.localEulerAngles = new Vector3(90, 0, 0);
             closing = false;
             GameManager.Instance.FinishChestOpen();
