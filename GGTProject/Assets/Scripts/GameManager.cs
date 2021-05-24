@@ -1,6 +1,8 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using TMPro;
+using DG.Tweening;
 
 namespace PickBonus
 {
@@ -39,13 +41,13 @@ namespace PickBonus
         public void IncreaseBet()
         {
             money.ChangeBet(true);
-            BetText.text = money.GetBet().ToString("c2");
+            UIUpdate(BetText, "", money.GetBet());
         }
 
         public void DecreaseBet()
         {
             money.ChangeBet(false);
-            BetText.text = money.GetBet().ToString("c2");
+            UIUpdate(BetText, "", money.GetBet());
         }
 
         //Events
@@ -71,11 +73,11 @@ namespace PickBonus
         void RoundSetup()
         {
             //Update displayed balance
-            BalanceText.text = "Balance: " + money.GetBalance().ToString("c2");
+            UIUpdate(BalanceText, "Balance: ", money.GetBalance());
 
             //Reset displayed Winnings
             displayedWinnings = 0f;
-            WinningsText.text = "Winnings: " + displayedWinnings.ToString("c2");
+            UIUpdate(WinningsText, "Winnings: ", displayedWinnings);
 
             BetText.transform.position += new Vector3(0, -175 ,0);
             UI2Hide.SetActive(false);
@@ -93,7 +95,7 @@ namespace PickBonus
             if (f != 0)
             {
                 displayedWinnings += f;
-                WinningsText.text = "Winnings: " + displayedWinnings.ToString("c2");
+                UIUpdate(WinningsText, "Winnings: ", displayedWinnings);
             }
             else
                 OnPooper();
@@ -103,11 +105,31 @@ namespace PickBonus
         {
             Debug.Log("Round End");
             money.AddFunds(money.GetWinnings());
-            BalanceText.text = "Balance: " + money.GetBalance().ToString("c2");
+            UIUpdate(BalanceText, "Balance: ", money.GetBalance());
+            WinningsText.text = "Previous " + WinningsText.text;
 
             BetText.transform.position += new Vector3(0, 175, 0);
             UI2Hide.SetActive(true);
             Chests.SetActive(false);
         }
+
+        void UIUpdate(TextMeshProUGUI destination, string Prefix, float newNum)
+        {
+            DOVirtual.Float(pullFloatfromString(destination.text), newNum, 1f, (v) => destination.text = v.ToString("c2"));
+        }
+
+        float pullFloatfromString(string s)
+        {
+            string newString = "";
+            foreach (char c in s)
+            {
+                if (Char.IsNumber(c) || c == '.')
+                {
+                    newString += c;
+                }
+            }
+            return float.Parse(newString);
+        }
+
     }
 }
