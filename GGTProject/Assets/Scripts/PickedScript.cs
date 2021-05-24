@@ -61,14 +61,14 @@ namespace PickBonus
             closing = true;
         }
 
-        private IEnumerator Close()
+        public IEnumerator Close()
         {
+            
             yield return new WaitForSeconds(1);
             transform.localEulerAngles = new Vector3(0, -90, 0);
             Lid.localPosition = new Vector3(0, 1, 0);
             Lid.localEulerAngles = new Vector3(90, 0, 0);
             closing = false;
-            GameManager.Instance.FinishChestOpen();
             gameObject.SetActive(false);
         }
 

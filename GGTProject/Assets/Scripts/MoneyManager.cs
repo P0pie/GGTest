@@ -154,7 +154,7 @@ namespace PickBonus
         //Get Winnings Distribution
         private float[] SeparateWinnings(float totalWinnings)
         {
-            float[] f = new float[8];
+            float[] f = new float[9];
             int w = (int)totalWinnings * 4;
             float z = 0;
 

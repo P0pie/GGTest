@@ -86,6 +86,7 @@ namespace PickBonus
             {
                 Chests.transform.GetChild(i).gameObject.SetActive(true);
             }
+            OnPickEnd();
             //Move Bet value to clear up screenspace. Spawn chests.
         }
 
@@ -122,6 +123,7 @@ namespace PickBonus
                 g.transform.DOPath(v, 3, (PathType)1, (PathMode)1);
                 }
                 UIUpdate(WinningsText, "Winnings: ", displayedWinnings);
+                OnPickEnd();
             }
             else
             {
@@ -134,11 +136,7 @@ namespace PickBonus
             }
 
         }
-        public void FinishChestOpen()
-        {
-            OnPickEnd();
-        }
-
+       
         void RoundEnd()
         {
             StartCoroutine(GG());
@@ -150,11 +148,11 @@ namespace PickBonus
             yield return new WaitForSeconds(2);
             money.AddFunds(money.GetWinnings());
             UIUpdate(BalanceText, "Balance: ", money.GetBalance());
-            WinningsText.text = "Previous " + WinningsText.text;
+            WinningsText.text = "Previous Winnings: " + WinningsText.text;
 
             BetText.transform.position += new Vector3(0, 175, 0);
             UI2Hide.SetActive(true);
-            Chests.SetActive(false);
+
         }
 
         void UIUpdate(TextMeshProUGUI destination, string Prefix, float newNum)
