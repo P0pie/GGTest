@@ -30,9 +30,6 @@ namespace PickBonus
         //Money Manager keeps track of finances
         MoneyManager money = new MoneyManager();
 
-        //Chest object to spawn
-        public GameObject Chest;
-
         //Numerical UI elements
         public TextMeshProUGUI BetText, BalanceText, WinningsText;
         float displayedWinnings;
@@ -52,6 +49,8 @@ namespace PickBonus
 
         //Events
         public event Action OnPlay;
+        public event Action OnPick;
+        public event Action OnPickEnd;
         public event Action OnPooper;
 
         private void Start()
@@ -70,6 +69,7 @@ namespace PickBonus
         }
 
         public GameObject UI2Hide, Chests;
+
         void RoundSetup()
         {
             //Update displayed balance
@@ -89,16 +89,34 @@ namespace PickBonus
             //Move Bet value to clear up screenspace. Spawn chests.
         }
 
+        public GameObject CoinPrefab;
+        public Transform PickedChest, coinTarget;
+
         public void OpenChest()
         {
+            OnPick();
+
             float f = money.NextWin();
             if (f != 0)
             {
                 displayedWinnings += f;
                 UIUpdate(WinningsText, "Winnings: ", displayedWinnings);
+
+                for (int i = 0; i < 20; i++)
+                {
+                    GameObject g = Instantiate(CoinPrefab, new Vector3((PickedChest.position.x + UnityEngine.Random.Range(-1f,1f)), (PickedChest.position.y + UnityEngine.Random.Range(-1f, 1f)), PickedChest.position.z), PickedChest.rotation);
+                    Vector3[] v = new Vector3[1];
+                    v[0] = coinTarget.position;
+                    g.transform.DOPath(v, 3, (PathType)1, (PathMode)1);
+                }
             }
             else
-                OnPooper();
+                OnPooper(); //basically just calls RoundEnd
+        }
+
+        public void FinishChestOpen()
+        {
+            OnPickEnd();
         }
 
         void RoundEnd()
@@ -129,6 +147,25 @@ namespace PickBonus
                 }
             }
             return float.Parse(newString);
+        }
+
+        public Camera cam;
+
+        void Update()
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+                RaycastHit hit;
+                if (Physics.Raycast(ray, out hit))
+                {
+                    if (hit.transform.tag == "Chest")
+                    {
+                        hit.transform.GetComponent<PickedScript>().Picked();
+                    }
+
+                }
+            }
         }
 
     }
