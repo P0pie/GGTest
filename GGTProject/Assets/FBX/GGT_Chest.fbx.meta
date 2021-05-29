@@ -1,9 +1,29 @@
 fileFormatVersion: 2
-guid: 9f3f7d105eec9b74593f9be709f212fc
+guid: 12d944d5f0c16eb40a85427a3878423f
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Red_Logo
+    second: {fileID: 2100000, guid: 479e957c58f4a634eb4909a2510173e5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Silver
+    second: {fileID: 2100000, guid: 73b3f5a8d7c5c3a478d83a4d3022fd7d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Title
+    second: {fileID: 2100000, guid: 5af051c2d17323943bbccee1c62d692b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood
+    second: {fileID: 2100000, guid: fedd384809fefe848a2b414bb674a036, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

@@ -6,8 +6,8 @@ namespace PickBonus
 {
     public class PickedScript : MonoBehaviour
     {
-        private Transform Lid, Hinge;
         public BoxCollider myCollider;
+        Transform Lid, Hinge;
         bool rotate = false, open = false, closing = false;
 
 
@@ -47,7 +47,7 @@ namespace PickBonus
 
         private IEnumerator LeanForward()
         {
-            transform.Rotate(0, 0, (80 * Time.deltaTime));
+            transform.Rotate((-80 * Time.deltaTime), 0, 0, Space.World);
             yield return new WaitForSeconds(.5f);
             rotate = false;
             open = true;
@@ -65,8 +65,8 @@ namespace PickBonus
         {
             
             yield return new WaitForSeconds(1);
-            transform.localEulerAngles = new Vector3(0, -90, 0);
-            Lid.localPosition = new Vector3(0, 1, 0);
+            transform.localEulerAngles = new Vector3(-90, 0, -90);
+            Lid.localPosition = new Vector3(0, 0, 0.01f);
             Lid.localEulerAngles = new Vector3(90, 0, 0);
             closing = false;
             gameObject.SetActive(false);
