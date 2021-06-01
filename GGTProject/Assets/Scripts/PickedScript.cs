@@ -14,7 +14,7 @@ namespace PickBonus
         private void Start()
         {
             GameManager.Instance.OnPick += DisableCollider;
-            GameManager.Instance.OnPickEnd += EnableCollider;
+            GameManager.Instance.OnResetChests += EnableCollider;
             Lid = transform.GetChild(0);
             Hinge = transform.GetChild(1);
         }
@@ -40,7 +40,7 @@ namespace PickBonus
         public void Picked()
         {
             rotate = true;
-            GameManager.Instance.PickedChest = transform;
+            GameManager.Instance.SetPickedChest(transform);
             GameManager.Instance.OpenChest();
             Close();
         }

@@ -34,7 +34,8 @@ namespace PickBonus
         public TextMeshProUGUI BetText, BalanceText, WinningsText;
         float displayedWinnings;
 
-
+        //1) Bet
+        //---------------------------------------------------------------------------
         public void IncreaseBet()
         {
             money.ChangeBet(true);
@@ -50,7 +51,7 @@ namespace PickBonus
         //Events
         public event Action OnPlay;
         public event Action OnPick;
-        public event Action OnPickEnd;
+        public event Action OnResetChests;
         public event Action OnPooper;
 
         private void Start()
@@ -58,6 +59,28 @@ namespace PickBonus
             OnPlay += RoundSetup;
             OnPooper += RoundEnd;
         }
+
+        public Camera cam;
+
+        void Update()
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+                RaycastHit hit;
+                if (Physics.Raycast(ray, out hit))
+                {
+                    if (hit.transform.tag == "Chest")
+                    {
+                        hit.transform.GetComponent<PickedScript>().Picked();
+                    }
+
+                }
+            }
+        }
+
+        //2) Play 
+        //-----------------------------------------------------------------------------------------
 
         //Triggered by Play Button
         public void PlayGame()
@@ -79,19 +102,29 @@ namespace PickBonus
             displayedWinnings = 0f;
             UIUpdate(WinningsText, "Winnings: ", displayedWinnings);
 
+            //Shift UI to clear up screenspace
             BetText.transform.position += new Vector3(0, -175 ,0);
             UI2Hide.SetActive(false);
+
+            //Reset Chests
             Chests.SetActive(true);
             for (int i = 0; i<Chests.transform.childCount; i++)
             {
                 Chests.transform.GetChild(i).gameObject.SetActive(true);
             }
-            OnPickEnd();
-            //Move Bet value to clear up screenspace. Spawn chests.
+            OnResetChests();
         }
 
+        //3) Pick
+        //--------------------------------------------------------------------------------------------
         public GameObject CoinPrefab, PooperPrefab;
-        public Transform PickedChest, coinTarget;
+        public Transform coinTarget;
+        Transform _pickedChest;
+
+        public void SetPickedChest(Transform t)
+        {
+            _pickedChest = t;
+        }
 
         public void OpenChest()
         {
@@ -114,33 +147,33 @@ namespace PickBonus
             GameObject g;
             if (isWin)
             {
-                for (int i = 0; i < 10; i++)
+                for (int i = 0; i < 15; i++)
                 {
-                 g = Instantiate(CoinPrefab, new Vector3((PickedChest.position.x + UnityEngine.Random.Range(-1f, 1f)), (PickedChest.position.y + UnityEngine.Random.Range(-1f, 1f)), PickedChest.position.z), PickedChest.rotation);
-                Vector3[] v = new Vector3[2];
-                v[0] = new Vector3(0, 5, -10);
-                v[1] = coinTarget.position;
-                g.transform.DOPath(v, 3, (PathType)1, (PathMode)1);
+                    g = Instantiate(CoinPrefab, new Vector3((_pickedChest.position.x + UnityEngine.Random.Range(-1f, 1f)), (_pickedChest.position.y + UnityEngine.Random.Range(-1f, 1f)), _pickedChest.position.z), _pickedChest.rotation);
+                    Vector3[] v = new Vector3[2];
+                    v[0] = new Vector3(0, 5, -10);
+                    v[1] = coinTarget.position;
+                    g.transform.DOPath(v, 3, (PathType)1, (PathMode)1);
                 }
                 UIUpdate(WinningsText, "Winnings: ", displayedWinnings);
-                OnPickEnd();
+                OnResetChests();
             }
             else
             {
-                g = Instantiate(PooperPrefab, PickedChest.position, PickedChest.rotation);
+                g = Instantiate(PooperPrefab, _pickedChest.position, _pickedChest.rotation);
+                g.transform.LookAt(new Vector3(_pickedChest.position.x, cam.transform.position.y * -1, cam.transform.position.z * -1));
                 Vector3[] v = new Vector3[1];
                 v[0] = cam.transform.position;
-                g.transform.LookAt(cam.transform.position * -1);
                 g.transform.DOPath(v, 3, (PathType)1, (PathMode)1);
                 OnPooper();
             }
-
         }
        
+        //4) Reset 
+        //------------------------------------------------------------------------------------------------------------------------------------
         void RoundEnd()
         {
             StartCoroutine(GG());
-            
         }
 
         IEnumerator GG()
@@ -152,7 +185,6 @@ namespace PickBonus
 
             BetText.transform.position += new Vector3(0, 175, 0);
             UI2Hide.SetActive(true);
-
         }
 
         void UIUpdate(TextMeshProUGUI destination, string Prefix, float newNum)
@@ -173,24 +205,7 @@ namespace PickBonus
             return float.Parse(newString);
         }
 
-        public Camera cam;
 
-        void Update()
-        {
-            if (Input.GetMouseButtonDown(0))
-            {
-                Ray ray = cam.ScreenPointToRay(Input.mousePosition);
-                RaycastHit hit;
-                if (Physics.Raycast(ray, out hit))
-                {
-                    if (hit.transform.tag == "Chest")
-                    {
-                        hit.transform.GetComponent<PickedScript>().Picked();
-                    }
-
-                }
-            }
-        }
 
     }
 }
